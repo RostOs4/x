@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(to bottom right, blue, pink);
+    margin: 0;
+    padding: 0;
+}
+
+.transform_center {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    z-index: 10;
+}
+
+.transform { 
+    -webkit-animation-duration: 5s; 
+    animation-duration: 5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-name: fadeOut; 
+    animation-name: fadeOut;
+} 
+@-webkit-keyframes fadeOut { 
+    0% {opacity: 1;} 
+    100% {opacity: 0;} 
+} 
+@keyframes fadeOut { 
+    0% {opacity: 1;} 
+    100% {opacity: 0;} 
+}
+
+div {
+    position:relative;
+}
+
+.levels {
+    padding-top: 75%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.lock {
+    color:black;
+    width: 25%;
+    margin-right: 0%;
+    margin-left: auto;
+}
+
+.first_button {
+    border: 7px solid  #FEC007;
+    background-color: gray;
+    border-radius: 50px;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button {
+    border: 7px solid  #FEC007;
+    background-color: gray;
+    border-radius: 50px;
+    padding: 5%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button_text {
+    font-size: 300%;
+    text-align: center;
+    padding-top: 3%;
+    width: 50%;
+    
+}
+
+.title {
+    position: absolute;
+    top:  0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
