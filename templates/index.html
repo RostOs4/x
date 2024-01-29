@@ -7,24 +7,80 @@
     <link rel="stylesheet" href="/static/styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
 <body>
-    <img src="/static/white.png" class="transform_center transform">
+    <img src="/static/white.png" class="transform_center transform_start" id="white">
     <img src="/static/happy_birthday.png" class="title">
+
     <div class="levels">
-        <div class="first_button">
+        {% if level == 1 and change == 0 %}
+        <div class="first_button close">
             <div class="button_text">1 уровень</div>
-            <img src="/static/lock.png" class="lock">
+            <img src="/static/lock.png" class="icons">
         </div>
-        <div class="button">
+        {% elif level == 1 and change == 1 %}
+        <div class="first_button proccess">
+            <div class="button_text">1 уровень</div>
+            <img src="/static/proccess.png" class="icons">
+        </div>
+        {% else %}
+        <div class="first_button done">
+            <div class="button_text">1 уровень</div>
+            <img src="/static/done.png" class="icons" />
+        </div>
+        {% endif %}
+        
+        {% if level < 2 %}
+        <div class="button close">
             <div class="button_text">2 уровень</div>
-            <img src="/static/lock.png" class="lock">
+            <img src="/static/lock.png" class="icons">
         </div>
-        <div class="button">
+        {% elif level == 2 and change == 0 %}
+        <div class="button close">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/lock.png" class="icons">
+        </div>
+        {% elif level == 2 and change == 1 %}
+        <div class="button proccess">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/proccess.png" class="icons">
+        </div>
+        {% else %}
+        <div class="button done">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/done.png" class="icons">
+        </div>
+        {% endif %}
+
+        {% if level < 3 %}
+        <div class="button close">
             <div class="button_text">3 уровень</div>
-            <img src="/static/lock.png" class="lock">
+            <img src="/static/lock.png" class="icons">
+        </div>
+        {% elif level == 3 and change == 0 %}
+        <div class="button close">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/lock.png" class="icons">
+        </div>
+        {% elif level == 3 and change == 1 %}
+        <div class="button proccess">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/proccess.png" class="icons">
+        </div>
+        {% else %}
+        <div class="button done">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/done.png" class="icons">
+        </div>
+        {% endif %}
+
+        <div class = down_button>
+            <div class="small_button_left" id="trophy">
+                <img src="/static/trophy.png" class="trophy_image">
+            </div>
+            <div class="small_button_right" id="map">
+                <img src="/static/map.png" class="map_image">
+            </div>
         </div>
     </div>
-
-
-
+    <script src="/static/js/index.js"></script>
 </body>
 </html>

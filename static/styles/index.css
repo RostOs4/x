@@ -12,9 +12,9 @@ body {
     z-index: 10;
 }
 
-.transform { 
-    -webkit-animation-duration: 5s; 
-    animation-duration: 5s; 
+.transform_start { 
+    -webkit-animation-duration: 3s; 
+    animation-duration: 3s; 
     -webkit-animation-fill-mode: both; 
     animation-fill-mode: both; 
     -webkit-animation-name: fadeOut; 
@@ -29,6 +29,23 @@ body {
     100% {opacity: 0;} 
 }
 
+.transform_end { 
+    -webkit-animation-duration: 3s; 
+    animation-duration: 3s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-name: fadeIn; 
+    animation-name: fadeIn;
+} 
+@-webkit-keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;} 
+} 
+@keyframes fadeIn { 
+    0% {opacity: 0;}
+    100% {opacity: 1;} 
+}
+
 div {
     position:relative;
 }
@@ -38,7 +55,8 @@ div {
     padding-left: 20%;
     padding-right: 20%;
 }
-.lock {
+
+.icons {
     color:black;
     width: 25%;
     margin-right: 0%;
@@ -47,7 +65,6 @@ div {
 
 .first_button {
     border: 7px solid  #FEC007;
-    background-color: gray;
     border-radius: 50px;
     padding: 5%;
     display: flex;
@@ -57,7 +74,6 @@ div {
 
 .button {
     border: 7px solid  #FEC007;
-    background-color: gray;
     border-radius: 50px;
     padding: 5%;
     margin-top: 5%;
@@ -71,7 +87,6 @@ div {
     text-align: center;
     padding-top: 3%;
     width: 50%;
-    
 }
 
 .title {
@@ -79,4 +94,58 @@ div {
     top:  0%;
     left: 50%;
     transform: translate(-50%,0%);
+}
+
+.small_button_left {
+    border: 7px solid  #FEC007;
+    background: linear-gradient(to bottom left, #26CFEE,  #A360CB);
+    border-radius: 50px;
+    padding: 3%;
+    margin-top: 10%;
+    width: 35%;
+}
+
+.small_button_right {
+    border: 7px solid  #FEC007;
+    background: linear-gradient(to bottom right, #26CFEE,  #A360CB);
+    border-radius: 50px;
+    padding: 3%;
+    margin-top: 10%;
+    width: 35%;
+}
+
+.done {
+    background: linear-gradient(to bottom left, #29a366,  #d8d522);
+}
+
+.close {
+    background-color: grey;
+}
+
+.proccess {
+    background: linear-gradient(to bottom right, #d8d522,  #eb5e06);
+}
+
+.disappeared {
+    visibility: hidden;
+}
+
+.down_button {
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.map_image {
+    color:black;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.trophy_image {
+    color:black;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }

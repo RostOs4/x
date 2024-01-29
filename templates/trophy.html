@@ -1,0 +1,49 @@
+<html>
+<head>
+    <!--Параметры страницы-->
+    <meta charset="utf-8">
+    <title>HappyBirthday</title>
+    <link rel="shortcut icon" href="/static/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/styles/trophy.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<body>
+    <img src="/static/white.png" class="transform_center transform_start" id="white">
+    <img src="/static/happy_birthday.png" class="title">
+
+    <div class="levels">
+        {% if level < 2 %}
+        <div class="bord">
+            <img src="/static/quest.png" class="certificate close_image">
+        </div>
+        {% else %}
+        <div class="bord">
+            <img src="/static/quest.png" class="certificate">
+        </div>
+        {% endif %}
+        {% if level < 3 %}
+        <div class="bord">
+            <img src="/static/coffee.png" class="certificate close_image">
+        </div>
+        {% else %}
+        <div class="bord">
+            <img src="/static/coffee.png" class="certificate">
+        </div>
+        {% endif %}
+        {% if level <= 3 %}
+        <div class="bord">
+            <img src="/static/tattoo.png" class="certificate close_image">
+        </div>
+        {% else %}
+        <div class="bord">
+            <img src="/static/tattoo.png" class="certificate">
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="back" id="back">
+        <img src="/static/back.png">
+    </div>
+
+    <script src="/static/js/trophy.js"></script>
+</body>
+</html>
