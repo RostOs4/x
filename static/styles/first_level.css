@@ -133,8 +133,8 @@ input.grey[type="button"] {
 .reload {
     display: inline-block;
     position:absolute;
-    bottom:28%;
-    width: max-content;
+    bottom:50%;
+    width: 30%;
     margin-left: 35%;
     margin-right: 35%;
     border-radius: 25px;
@@ -143,10 +143,10 @@ input.grey[type="button"] {
 }
 
 .done {
+    width: 80%;
     display: inline-block;
     position:absolute;
-    bottom:28%;
-    width: max-content;
+    bottom:50%;
     border-radius: 25px;
     border: 7px solid white;
     margin-left: 10%;

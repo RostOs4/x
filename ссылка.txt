@@ -21,3 +21,19 @@ http://89.111.153.236:5000/
 3 - сертификат на тату
 
 Уровень -> Действие -> Ключевое слово -> Приз -> Следующий уровень
+
+
+
+
+Залив:
+
+	Консоль:
+		1) git add .
+		2) git push -u origin master
+	Сервер:
+		1) ./load
+		2) cd x
+		3) docker ps
+		4) docker kill container_id
+		5) docker build -t app .
+		6) docker run -p 5000:5000 app

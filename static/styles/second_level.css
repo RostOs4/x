@@ -123,6 +123,7 @@ input.start[type="button"] {
 }
 
 .done {
+    width: 80%;
     display: inline-block;
     position:absolute;
     bottom:40%;

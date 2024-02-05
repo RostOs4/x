@@ -6,11 +6,12 @@
     <link rel="shortcut icon" href="/static/icon.png" type="image/png">
     <link rel="stylesheet" href="/static/styles/first_level.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 <body>
     <img src="/static/white.png" class="transform_center transform_start" id="white">
     <img src="/static/happy_birthday.png" class="title">
 
-    <div class="word">
+    <div class="word" id="word">
         <div class="row">
             <input type="button" class="word_letter start" value="">
             <input type="button" class="word_letter start" value="">
@@ -134,11 +135,18 @@
                         letters[i].classList.remove("start");
                         letters[i].classList.add("green");
                     };
-                    change_up++;
+
+                    document.querySelector("#word").classList.add('transform_start')
                     document.querySelector('#clear').classList.add('transform_start');
                     document.querySelector('#check_word').classList.add('transform_start');
-                    document.querySelector('#done').classList.add('transform_end');
-                    document.querySelector('#done').classList.add('z_index');
+
+                    change_up++;
+
+                    setTimeout(function() {
+                        document.querySelector('#done').classList.add('transform_end');
+                        document.querySelector('#done').classList.add('z_index');
+                    }, 3000);
+                    
                 }
                 else {
                     if (all_words.includes(word)) {
@@ -171,9 +179,14 @@
                         }
                         check_row ++;
                         if (check_row == 5) {
+                            document.querySelector("#word").classList.add('transform_start')
                             document.querySelector('#clear').classList.add('transform_start');
                             document.querySelector('#check_word').classList.add('transform_start');
-                            document.querySelector('#reload').classList.add('transform_end');
+
+                            setTimeout(function() {
+                                document.querySelector('#reload').classList.add('transform_end');
+                            }, 3000);
+                            
                         }
                     }
                     else {
