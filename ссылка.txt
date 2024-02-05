@@ -28,8 +28,7 @@ http://89.111.153.236:5000/
 Залив:
 
 	Консоль:
-		1) git add .
-		2) git push -u origin master
+		1) push
 	Сервер:
 		1) ./load
 		2) cd x
