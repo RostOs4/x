@@ -16,21 +16,19 @@
             <img src="/static/cat_info.png">
         </div>
         <div class="text">
-            <input type="text" id="text" placeholder="Кодовое слово" maxlength="15">
+            <input type="text" id="text" placeholder="Кодовое слово" maxlength="15" autocomplete="off">
         </div>
         <div class="text">
             <button class="check" id="check">Проверить кодовое слово</button>
+        </div>
+        <div>
+            <img src="/static/task{{level}}.png">
         </div>
         {% else %}
         <div> 
             <img src="/static/cat_block.png">
         </div>
         {% endif %}
-
-        <div>
-            <img src="/static/task1.png">
-        </div>
-
         <hr style="margin: auto; width: 60%; size:10 "/>
 
         <div id="cat_true" style="margin-top: 10%;" class="hide_block">
@@ -55,10 +53,11 @@
             var text = document.querySelector("#text").value;
             text = text.toLowerCase()
             if (text == word['{{ level }}' - 1]){
-                document.querySelector("#cat_false").classList.toggle("transform_end");
+                document.querySelector("#cat_false").classList.remove("transform_end");
                 document.querySelector("#cat_true").classList.toggle("transform_end");
                 document.querySelector("#check").classList.toggle("block_button");
                 document.querySelector("#text").disabled = true;
+                level_up = 1
                 }
             else{
                 document.querySelector("#cat_false").classList.toggle("transform_end");

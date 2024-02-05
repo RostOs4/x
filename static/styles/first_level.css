@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(to bottom right, blue, pink);
+    margin: 0;
+    padding: 0;
+}
+
+.transform_center {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    z-index: 10;
+}
+
+.transform_start { 
+    -webkit-animation-duration: 3s; 
+    animation-duration: 3s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-name: fadeOut; 
+    animation-name: fadeOut;
+} 
+@-webkit-keyframes fadeOut { 
+    0% {opacity: 1;} 
+    100% {opacity: 0;} 
+} 
+@keyframes fadeOut { 
+    0% {opacity: 1;} 
+    100% {opacity: 0;} 
+}
+
+.transform_end { 
+    -webkit-animation-duration: 3s; 
+    animation-duration: 3s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-name: fadeIn; 
+    animation-name: fadeIn;
+} 
+@-webkit-keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;} 
+} 
+@keyframes fadeIn { 
+    0% {opacity: 0;} 
+    100% {opacity: 1;} 
+}
+
+div {
+    position:relative;
+}
+
+.back {
+    margin-left: 5%;
+    width: 10%;
+    position:absolute;
+    bottom:5%;
+}
+
+.keyboard {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    position:absolute;
+    bottom:5%;
+}
+
+.row {
+    height: 5%;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.letter {
+    font-size: 300%;
+    height: 100%;
+    width: 7%;
+    border-radius: 25px;
+    border: 7px solid  #FEC007;
+}
+
+.clear {
+    font-size: 300%;
+    height: 10%;
+    width: 30%;
+    border-radius: 25px;
+    border: 7px solid  #FEC007;
+}
+
+.word {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    position:absolute;
+}
+
+.word_letter {
+    font-size: 500%;
+    height: 100%;
+    width: 15%;
+    border-radius: 25px;
+    border: 7px solid  #FEC007;
+}
+
+input.start[type="button"] {
+    background-color: white;
+}
+
+input.green[type="button"] {
+    background-color: #29a366;
+}
+
+input.yellow[type="button"] {
+    background-color: #d8d522;
+}
+
+input.grey[type="button"] {
+    background-color: grey;
+}
+
+.error {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    position:absolute;
+    margin-top: 80%;
+}
+
+.hide_block {
+    opacity: 0;
+}
+
+.reload {
+    display: inline-block;
+    position:absolute;
+    bottom:28%;
+    width: max-content;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-radius: 25px;
+    border: 7px solid white;
+    z-index: 1;
+}
+
+.done {
+    display: inline-block;
+    position:absolute;
+    bottom:28%;
+    width: max-content;
+    border-radius: 25px;
+    border: 7px solid white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.z_index {
+    z-index: 2;
+}

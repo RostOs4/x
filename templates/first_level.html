@@ -1,0 +1,189 @@
+<html>
+<head>
+    <!--Параметры страницы-->
+    <meta charset="utf-8">
+    <title>HappyBirthday</title>
+    <link rel="shortcut icon" href="/static/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/styles/first_level.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<body>
+    <img src="/static/white.png" class="transform_center transform_start" id="white">
+    <img src="/static/happy_birthday.png" class="title">
+
+    <div class="word">
+        <div class="row">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+        </div>
+        <div class="row">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+        </div>
+        <div class="row">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+        </div>
+        <div class="row">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+        </div>
+        <div class="row">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+            <input type="button" class="word_letter start" value="">
+        </div>
+    </div>
+
+    <div class="reload hide_block" id="reload">
+        <img src="/static/reload.png">
+    </div>
+    <div class="done hide_block" id="done">
+        <img src="/static/done_level.png">
+    </div>
+    <div id="error" class="error hide_block">
+        <img src="/static/level1_error.png">
+    </div>
+
+    <div class="keyboard">
+        <div class="row">
+            <input type="button" class="letter start" value="Й">
+            <input type="button" class="letter start" value="Ц">
+            <input type="button" class="letter start" value="У">
+            <input type="button" class="letter start" value="К">
+            <input type="button" class="letter start" value="Е">
+            <input type="button" class="letter start" value="Н">
+            <input type="button" class="letter start" value="Г">
+            <input type="button" class="letter start" value="Ш">
+            <input type="button" class="letter start" value="Щ">
+            <input type="button" class="letter start" value="З">
+            <input type="button" class="letter start" value="Х">
+            <input type="button" class="letter start" value="Ъ">
+        </div>
+        <div class="row">
+            <input type="button" class="letter start" value="Ф">
+            <input type="button" class="letter start" value="Ы">
+            <input type="button" class="letter start" value="В">
+            <input type="button" class="letter start" value="А">
+            <input type="button" class="letter start" value="П">
+            <input type="button" class="letter start" value="Р">
+            <input type="button" class="letter start" value="О">
+            <input type="button" class="letter start" value="Л">
+            <input type="button" class="letter start" value="Д">
+            <input type="button" class="letter start" value="Ж">
+            <input type="button" class="letter start" value="Э">
+        </div>
+        <div class="row">
+            <input type="button" class="letter start" value="Я">
+            <input type="button" class="letter start" value="Ч">
+            <input type="button" class="letter start" value="С">
+            <input type="button" class="letter start" value="М">
+            <input type="button" class="letter start" value="И">
+            <input type="button" class="letter start" value="Т">
+            <input type="button" class="letter start" value="Ь">
+            <input type="button" class="letter start" value="Б">
+            <input type="button" class="letter start" value="Ю">
+        </div>
+        <div class="row">
+            <input id="check_word" type="button" class="clear start" value="Проверить">
+            <input id="clear" type="button" class="clear start" value="&#8592;">
+        </div>
+    <div class="back" id="back">
+        <img src="/static/back.png">
+    </div>
+
+    <script src="/static/js/first_level.js"></script>
+
+    <script>
+        var all_words = '{{ words|tojson|safe }}';
+        all_words = JSON.parse(all_words);
+
+        document.querySelector("#check_word").addEventListener('click', function (element){
+            let i_letter = 0
+            let word = '';
+            let letters = [];
+            for (var i = 0; i < document.querySelectorAll('.word_letter').length; ++i) {
+                var word_letter = document.querySelectorAll('.word_letter')[i];
+                if (word_letter.value != "") {
+                    i_letter ++;
+                    if (i_letter > check_row * 5) {
+                        word += word_letter.value.toLowerCase();
+                        letters.push(word_letter);
+                    }
+                }
+                else {
+                    break;
+                }
+            }
+            if (word.length == 5) {
+                if (word == '{{ true_word }}') {
+                    for (var i = 0;  i < letters.length; i++) {
+                        letters[i].classList.remove("start");
+                        letters[i].classList.add("green");
+                    };
+                    change_up++;
+                    document.querySelector('#clear').classList.add('transform_start');
+                    document.querySelector('#check_word').classList.add('transform_start');
+                    document.querySelector('#done').classList.add('transform_end');
+                    document.querySelector('#done').classList.add('z_index');
+                }
+                else {
+                    if (all_words.includes(word)) {
+                        true_word_copy = '{{ true_word }}'
+                        for (let i = 0; i < 5; i++) {
+                            if (word[i] === true_word_copy[i]) {
+                                word = word.slice(0, i) + '+' + word.slice(i + 1);
+                                true_word_copy = true_word_copy.slice(0, i) + '.' + true_word_copy.slice(i + 1);
+                            }
+                        }
+                        for (let i = 0; i < true_word_copy.length; i++) {
+                            if (word.includes(true_word_copy[i])) {
+                                const ind = word.indexOf(true_word_copy[i]);
+                                word = word.slice(0, ind) + '*' + word.slice(ind + 1);
+                            }
+                        }
+                        for (let i = 0; i < 5; i++){
+                            if (word[i]  === '+') {
+                                letters[i].classList.remove("start");
+                                letters[i].classList.add("green");
+                            }
+                            else if (word[i] == '*'){
+                                letters[i].classList.remove("start");
+                                letters[i].classList.add("yellow");
+                            }
+                            else {
+                                letters[i].classList.remove("start");
+                                letters[i].classList.add("grey");
+                            }
+                        }
+                        check_row ++;
+                        if (check_row == 5) {
+                            document.querySelector('#clear').classList.add('transform_start');
+                            document.querySelector('#check_word').classList.add('transform_start');
+                            document.querySelector('#reload').classList.add('transform_end');
+                        }
+                    }
+                    else {
+                        document.querySelector("#error").classList.add("transform_end");
+                    }  
+                }
+            }
+            else {
+                document.querySelector("#error").classList.add("transform_end");
+            }
+        });
+    </script>
+</body>
