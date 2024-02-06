@@ -1,0 +1,36 @@
+<html>
+<head>
+    <!--Параметры страницы-->
+    <meta charset="utf-8">
+    <title>HappyBirthday</title>
+    <link rel="shortcut icon" href="/static/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/styles/third_level.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<body>
+    <img src="/static/white.png" class="transform_center transform_start" id="white">
+    <!--img src="/static/happy_birthday.png" class="title"-->
+    <img src="/static/happy_birthday.png" class="title">
+    <div class="task">
+        <img src="/static/level3_task.png">
+    </div>
+    <div class="text">
+        <input type="text" id="text" placeholder="Кодовое слово" maxlength="15" autocomplete="off"/>
+    </div>
+    <div class="text">
+        <button class="check" id="check">Проверить кодовое слово</button>
+    </div>
+    <hr style="margin: auto; width: 60%; border-top-width: 3px; margin-top:30px;"/>
+    <div id="cat_true" class="hide_block cat_info">
+        <img src="/static/cat_true.png">
+    </div>
+    <div id="cat_false" class="hide_block cat_info">
+        <img src="/static/cat_false.png">
+    </div>
+
+    <div class="back" id="back">
+        <img src="/static/back.png">
+    </div>
+
+    <script src="/static/js/third_level.js"></script>
+</body>

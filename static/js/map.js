@@ -1,4 +1,4 @@
-var level_up = 0
+var level_up = 0;
 
 setTimeout(function() {
     document.querySelector("#white").style.zIndex = "-1";

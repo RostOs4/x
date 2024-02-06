@@ -50,18 +50,17 @@ div {
     position:relative;
 }
 
-.levels {
-    padding-top: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 .back {
     margin-left: 5%;
     width: 10%;
     position:absolute;
     bottom:5%;
+}
 
+.task {
+    margin-top: 10%;
+    width: 90%;
+    margin-left: 5%;
 }
 
 .text {
@@ -87,16 +86,11 @@ input[type=text] {
     background: linear-gradient(to bottom right, #d8d522,  #eb5e06);
 }
 
-.hide_block {
-    opacity: 0;
-}
-
-.block_button {
-    pointer-events: none;
-    cursor: default;
-}
-
 .cat_info {
     width: 80%;
     margin-left: 10%;
-}  
+}
+
+.hide_block {
+    opacity: 0;
+}
