@@ -43,3 +43,7 @@ div {
     height: 140%;
     min-width: 140%;
 }
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }

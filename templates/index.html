@@ -6,78 +6,78 @@
     <link rel="shortcut icon" href="/static/icon.png" type="image/png">
     <link rel="stylesheet" href="/static/styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
-<body class="disable-dbl-tap-zoom">
-    <img src="/static/white.png" class="transform_center transform_start disable-dbl-tap-zoom" id="white">
-    <img src="/static/happy_birthday.png" class="title disable-dbl-tap-zoom">
+<body>
+    <img src="/static/white.png" class="transform_center transform_start" id="white">
+    <img src="/static/happy_birthday.png" class="title">
 
-    <div class="levels" disable-dbl-tap-zoom>
+    <div class="levels">
         {% if level == 1 and change == 0 %}
-        <div class="first_button close disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">1 уровень</div>
-            <img src="/static/lock.png" class="icons disable-dbl-tap-zoom">
+        <div class="first_button close">
+            <div class="button_text">1 уровень</div>
+            <img src="/static/lock.png" class="icons">
         </div>
         {% elif level == 1 and change == 1 %}
-        <div class="first_button proccess disable-dbl-tap-zoom" id="first_level">
-            <div class="button_text disable-dbl-tap-zoom">1 уровень</div>
-            <img src="/static/proccess.png" class="icons disable-dbl-tap-zoom">
+        <div class="first_button proccess" id="first_level">
+            <div class="button_text">1 уровень</div>
+            <img src="/static/proccess.png" class="icons">
         </div>
         {% else %}
-        <div class="first_button done disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">1 уровень</div>
-            <img src="/static/done.png" class="icons disable-dbl-tap-zoom" />
+        <div class="first_button done">
+            <div class="button_text">1 уровень</div>
+            <img src="/static/done.png" class="icons" />
         </div>
         {% endif %}
         
         {% if level < 2 %}
-        <div class="button close disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">2 уровень</div>
-            <img src="/static/lock.png" class="icons disable-dbl-tap-zoom">
+        <div class="button close">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/lock.png" class="icons">
         </div>
         {% elif level == 2 and change == 0 %}
-        <div class="button close disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">2 уровень</div>
-            <img src="/static/lock.png" class="icons disable-dbl-tap-zoom">
+        <div class="button close">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/lock.png" class="icons">
         </div>
         {% elif level == 2 and change == 1 %}
-        <div class="button proccess disable-dbl-tap-zoom" id="second_level">
-            <div class="button_text disable-dbl-tap-zoom">2 уровень</div>
-            <img src="/static/proccess.png" class="icons disable-dbl-tap-zoom">
+        <div class="button proccess" id="second_level">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/proccess.png" class="icons">
         </div>
         {% else %}
-        <div class="button done disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">2 уровень</div>
-            <img src="/static/done.png" class="icons disable-dbl-tap-zoom">
+        <div class="button done">
+            <div class="button_text">2 уровень</div>
+            <img src="/static/done.png" class="icons">
         </div>
         {% endif %}
 
         {% if level < 3 %}
-        <div class="button close disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">3 уровень</div>
-            <img src="/static/lock.png" class="icons disable-dbl-tap-zoom">
+        <div class="button close">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/lock.png" class="icons">
         </div>
         {% elif level == 3 and change == 0 %}
-        <div class="button close disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">3 уровень</div>
-            <img src="/static/lock.png" class="icons disable-dbl-tap-zoom">
+        <div class="button close">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/lock.png" class="icons">
         </div>
         {% elif level == 3 and change == 1 %}
-        <div class="button proccess disable-dbl-tap-zoom" id="third_level">
-            <div class="button_text disable-dbl-tap-zoom">3 уровень</div>
-            <img src="/static/proccess.png" class="icons disable-dbl-tap-zoom">
+        <div class="button proccess" id="third_level">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/proccess.png" class="icons">
         </div>
         {% else %}
-        <div class="button done disable-dbl-tap-zoom">
-            <div class="button_text disable-dbl-tap-zoom">3 уровень</div>
-            <img src="/static/done.png" class="icons disable-dbl-tap-zoom">
+        <div class="button done">
+            <div class="button_text">3 уровень</div>
+            <img src="/static/done.png" class="icons">
         </div>
         {% endif %}
 
-        <div class = "down_button disable-dbl-tap-zoom">
-            <div class="small_button_left disable-dbl-tap-zoom" id="trophy">
-                <img src="/static/trophy.png" class="trophy_image disable-dbl-tap-zoom">
+        <div class = "down_button">
+            <div class="small_button_left" id="trophy">
+                <img src="/static/trophy.png" class="trophy_image">
             </div>
-            <div class="small_button_right disable-dbl-tap-zoom" id="map">
-                <img src="/static/map.png" class="map_image disable-dbl-tap-zoom">
+            <div class="small_button_right" id="map">
+                <img src="/static/map.png" class="map_image ">
             </div>
         </div>
     </div>

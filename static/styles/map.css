@@ -99,4 +99,8 @@ input[type=text] {
 .cat_info {
     width: 80%;
     margin-left: 10%;
-}  
+} 
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }

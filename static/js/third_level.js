@@ -1,6 +1,10 @@
 var change_up = 0;
 level_up = 0;
 
+document.querySelectorAll("*").forEach(element => {
+    element.classList.add("disable-dbl-tap-zoom");
+});
+
 setTimeout(function() {
     document.querySelector("#white").style.zIndex = "-1";
 }, 3000);

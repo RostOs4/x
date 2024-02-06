@@ -156,3 +156,7 @@ input.grey[type="button"] {
 .z_index {
     z-index: 2;
 }
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }

@@ -150,3 +150,7 @@ input.start[type="button"] {
 .task {
     padding-top: 10%;
 }
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }

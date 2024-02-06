@@ -81,3 +81,7 @@ div {
     position:absolute;
     bottom:5%;
 }
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }
