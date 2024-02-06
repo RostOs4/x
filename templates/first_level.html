@@ -189,12 +189,40 @@
                         }
                     }
                     else {
-                        document.querySelector("#error").classList.add("transform_end");
+                        document.querySelector("#word").classList.add('transform_start')
+                        document.querySelector('#clear').classList.add('transform_start');
+                        document.querySelector('#check_word').classList.add('transform_start');
+                        setTimeout(function() {
+                            document.querySelector('#error').classList.add('transform_end');
+                        }, 3000);
+                        setTimeout(function() {
+                            document.querySelector('#error').classList.remove('transform_end');
+                            document.querySelector("#word").classList.add("transform_end");
+                            document.querySelector("#word").classList.remove("transform_start");
+                            document.querySelector("#clear").classList.add("transform_end");
+                            document.querySelector("#clear").classList.remove("transform_start");
+                            document.querySelector("#check_word").classList.add("transform_end");
+                            document.querySelector("#check_word").classList.remove("transform_start");
+                        }, 6000);
                     }  
                 }
             }
             else {
-                document.querySelector("#error").classList.add("transform_end");
+                document.querySelector("#word").classList.add('transform_start')
+                document.querySelector('#clear').classList.add('transform_start');
+                document.querySelector('#check_word').classList.add('transform_start');
+                setTimeout(function() {
+                    document.querySelector('#error').classList.add('transform_end');
+                }, 3000);
+                setTimeout(function() {
+                    document.querySelector('#error').classList.remove('transform_end');
+                    document.querySelector("#word").classList.add("transform_end");
+                    document.querySelector("#word").classList.remove("transform_start");
+                    document.querySelector("#clear").classList.add("transform_end");
+                    document.querySelector("#clear").classList.remove("transform_start");
+                    document.querySelector("#check_word").classList.add("transform_end");
+                    document.querySelector("#check_word").classList.remove("transform_start");
+                }, 6000);
             }
         });
     </script>
