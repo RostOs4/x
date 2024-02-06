@@ -149,3 +149,7 @@ div {
     margin-right: auto;
     margin-left: auto;
 }
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }
