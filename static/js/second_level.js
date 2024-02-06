@@ -64,31 +64,37 @@ document.querySelector("#check_word").addEventListener('click', function (elemen
             break;
         }
     }
-    if (word == true_word) {
-        document.querySelector("#word").classList.add("transform_start");
-        setTimeout(function() {
-            document.querySelector("#done").classList.add("transform_end");
-        }, 3000);
-        change_up ++;
-    }
-    else {
-        document.querySelector("#word").classList.remove("transform_end");
-        document.querySelector("#word").classList.add("transform_start");
+    if (word.length == true_word.length) {
 
-        setTimeout(function() {
-            document.querySelector("#error").classList.add("transform_end");
-        }, 3000);
+        if (word == true_word) {
+            document.querySelector("#word").classList.add("transform_start");
+            setTimeout(function() {
+                document.querySelector("#done").classList.add("transform_end");
+            }, 3000);
+            change_up ++;
+        }
+        else {
+            document.querySelector("#word").classList.remove("transform_end");
+            document.querySelector("#word").classList.add("transform_start");
 
-        setTimeout(function() {
-            document.querySelector("#error").classList.add("transform_start");
-        }, 3000);
+            setTimeout(function() {
+                document.querySelector("#error").classList.add("transform_end");
+            }, 3000);
 
-        setTimeout(function() {
-            document.querySelector("#error").classList.remove("transform_end");
-            document.querySelector("#error").classList.remove("transform_start");
-            document.querySelector("#word").classList.remove("transform_start");
-            document.querySelector("#word").classList.add("transform_end");
-        }, 6000);
+            setTimeout(function() {
+                document.querySelector("#error").classList.add("transform_start");
+            }, 3000);
 
+            setTimeout(function() {
+                document.querySelector("#error").classList.remove("transform_end");
+                document.querySelector("#error").classList.remove("transform_start");
+                document.querySelector("#word").classList.remove("transform_start");
+                document.querySelector("#word").classList.add("transform_end");
+            }, 6000);
+            
+            setTimeout(function() {
+                document.querySelector("#word").classList.remove("transform_end");
+            }, 9000);
+        }
     }
 });

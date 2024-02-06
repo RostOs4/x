@@ -204,6 +204,9 @@
                             document.querySelector("#check_word").classList.add("transform_end");
                             document.querySelector("#check_word").classList.remove("transform_start");
                         }, 6000);
+                        setTimeout(function() {
+                            document.querySelector("#word").classList.remove("transform_end");
+                        }, 9000);
                     }  
                 }
             }
@@ -223,6 +226,9 @@
                     document.querySelector("#check_word").classList.add("transform_end");
                     document.querySelector("#check_word").classList.remove("transform_start");
                 }, 6000);
+                setTimeout(function() {
+                    document.querySelector("#word").classList.remove("transform_end");
+                }, 9000);
             }
         });
     </script>

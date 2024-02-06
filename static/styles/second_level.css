@@ -69,6 +69,7 @@ div {
     display: inline-block;
     text-align: center;
     width: 100%;
+    margin-top: 10%;
     position:absolute;
 }
 
@@ -85,7 +86,7 @@ div {
 }
 
 .word_letter {
-    font-size: 250%;
+    font-size: 300%;
     height: 100%;
     width: 8%;
     border-radius: 25px;
@@ -144,4 +145,8 @@ input.start[type="button"] {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.task {
+    margin-top: 10%;
 }
