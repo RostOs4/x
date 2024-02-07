@@ -62,14 +62,14 @@ div {
     text-align: center;
     width: 100%;
     position:absolute;
-    bottom:2%;
+    bottom:5%;
 }
 
 .word {
     display: inline-block;
     text-align: center;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 8%;
     position:absolute;
 }
 
@@ -148,7 +148,7 @@ input.start[type="button"] {
 }
 
 .task {
-    padding-top: 10%;
+    padding-top: 8%;
 }
 
 .disable-dbl-tap-zoom {
